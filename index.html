@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nestora – Real Estate Listings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#top">Nestora</a>
+  <nav>
+    <a href="#listings">Properties</a>
+    <a href="#locations">Find a location</a>
+    <button class="btn ghost" id="openEnquiry">Enquire</button>
+    <button class="btn" id="openAdd">+ Add property</button>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <h1>Find a place that fits your budget and your life.</h1>
+  <p>Browse homes, plots and offices. Filter by city, price and type, save favourites and send an enquiry in seconds.</p>
+  <div class="filters">
+    <label>Location<input id="fLoc" placeholder="e.g. Hyderabad"></label>
+    <label>Max price (₹)<input id="fPrice" type="number" min="0" placeholder="e.g. 10000000"></label>
+    <label>Type
+      <select id="fType"><option value="">All types</option><option>Apartment</option><option>Villa</option><option>House</option><option>Commercial</option><option>Plot</option></select>
+    </label>
+    <label class="check"><input type="checkbox" id="fFav"> Favourites only</label>
+    <button class="btn ghost" id="fReset">Clear</button>
+  </div>
+</section>
+
+<main>
+  <section id="listings">
+    <div class="row"><h2>Available properties</h2><span id="count" class="muted"></span></div>
+    <div id="grid" class="grid"></div>
+  </section>
+
+  <section id="locations" class="panel">
+    <h2>Find a location</h2>
+    <p class="muted">Search any city or town. Results come live from the Open-Meteo Geocoding API.</p>
+    <form id="locForm" class="inline">
+      <input id="locQuery" placeholder="Search a city, e.g. Pune" aria-label="Search a city">
+      <button class="btn">Search</button>
+    </form>
+    <div id="locStatus" class="status" role="status"></div>
+    <div id="locResults" class="grid small"></div>
+  </section>
+
+  <details class="panel" id="enqPanel">
+    <summary>Customer enquiries (<span id="enqCount">0</span>)</summary>
+    <ul id="enqList"></ul>
+  </details>
+</main>
+
+<footer>© Nestora · Built with HTML, CSS and JavaScript</footer>
+
+<!-- Property modal -->
+<dialog id="propDialog">
+  <form id="propForm" novalidate>
+    <h3 id="propTitle">Add property</h3>
+    <input type="hidden" id="pId">
+    <label>Property name<input id="pName"><small class="err" data-for="pName"></small></label>
+    <label>Location<input id="pLoc"><small class="err" data-for="pLoc"></small></label>
+    <div class="two">
+      <label>Price (₹)<input id="pPrice" type="number" min="0"><small class="err" data-for="pPrice"></small></label>
+      <label>Type
+        <select id="pType"><option value="">Select</option><option>Apartment</option><option>Villa</option><option>House</option><option>Commercial</option><option>Plot</option></select>
+        <small class="err" data-for="pType"></small></label>
+    </div>
+    <label>Image URL (optional)<input id="pImg" placeholder="https://..."><small class="err" data-for="pImg"></small></label>
+    <label>Description<textarea id="pDesc" rows="3"></textarea><small class="err" data-for="pDesc"></small></label>
+    <div class="actions"><button type="button" class="btn ghost" data-close>Cancel</button><button class="btn">Save property</button></div>
+  </form>
+</dialog>
+
+<!-- Enquiry modal -->
+<dialog id="enqDialog">
+  <form id="enqForm" novalidate>
+    <h3>Send an enquiry</h3>
+    <label>Property<select id="eProp"></select><small class="err" data-for="eProp"></small></label>
+    <label>Your name<input id="eName"><small class="err" data-for="eName"></small></label>
+    <div class="two">
+      <label>Email<input id="eEmail" type="email"><small class="err" data-for="eEmail"></small></label>
+      <label>Phone<input id="ePhone" placeholder="10 digits"><small class="err" data-for="ePhone"></small></label>
+    </div>
+    <label>Message<textarea id="eMsg" rows="3"></textarea><small class="err" data-for="eMsg"></small></label>
+    <div class="actions"><button type="button" class="btn ghost" data-close>Cancel</button><button class="btn">Send enquiry</button></div>
+  </form>
+</dialog>
+
+<div id="toast" class="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
