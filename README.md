@@ -1,8 +1,8 @@
-Nestora – Real Estate Property Listing Application
+**Nestora – Real Estate Property Listing Application**
 
 Nestora is a simple, responsive real estate web app where users can browse
 properties, filter them by location, price and type, save favourites and send
-enquiries. It is built with **only HTML, CSS and JavaScript**. There are no
+enquiries. It is built with **HTML, CSS and JavaScript**. There are no
 frameworks, no libraries and no build step.
 
 ## ✨ Features
