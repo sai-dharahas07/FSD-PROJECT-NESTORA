@@ -35,7 +35,7 @@ real-estate-app/
 └── README.md
 ```
 
-# 🚀 How to Run
+# How to Run
 
 1. Clone or download this repository.
 
