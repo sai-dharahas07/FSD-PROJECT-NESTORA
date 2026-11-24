@@ -55,7 +55,7 @@ real-estate-app/
 User action → Validate input → Update array → Save to LocalStorage → Re-render with forEach()
 ```
 
-# ✅ Validation Rules
+#  Validation Rules
 
 - Property name: At least 3 characters.
 - Price: Greater than 0.
