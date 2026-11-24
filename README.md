@@ -49,7 +49,7 @@ real-estate-app/
 
 3. Keep your internet connection on for property photos and location search.
 
-# 🔍 How It Works
+#  How It Works
 
 ```text
 User action → Validate input → Update array → Save to LocalStorage → Re-render with forEach()
