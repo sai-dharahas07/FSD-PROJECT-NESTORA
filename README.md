@@ -40,7 +40,7 @@ real-estate-app/
 1. Clone or download this repository.
 
    ```bash
-   git clone https://github.com/<your-username>/nestora-real-estate-app.git
+   git clone https://github.com/sai-dharahas07/nestora-real-estate-app.git
    ```
 
 2. Open the folder and double-click **`index.html`** in your browser.
