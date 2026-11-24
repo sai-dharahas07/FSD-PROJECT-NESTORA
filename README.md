@@ -15,7 +15,7 @@ Nestora is a simple, responsive real estate web app where users can browse prope
 - **Loading and error states:** Spinner while loading, with clear messages for no results or network errors.
 - **Responsive design:** Works on desktop, tablet and mobile.
 
-# 🛠️ Tech Stack
+# Tech Stack
 
 | Technology              | Used for                                        |
 | ----------------------- | ----------------------------------------------- |
