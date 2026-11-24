@@ -64,7 +64,7 @@ User action → Validate input → Update array → Save to LocalStorage → Re-
 - Phone: Valid 10-digit mobile number.
 - Enquiry message: At least 10 characters.
 
-# 🔮 Future Improvements
+#  Future Improvements
 
 - Backend database and user login.
 - Interactive map and image upload.
