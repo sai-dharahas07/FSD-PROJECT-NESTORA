@@ -25,7 +25,7 @@ Nestora is a simple, responsive real estate web app where users can browse prope
 | LocalStorage            | Saving data in the browser                      |
 | Fetch API + async/await | Calling the location API                        |
 
-# 📁 Project Structure
+# Project Structure
 
 ```text
 real-estate-app/
